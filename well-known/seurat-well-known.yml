@@ -1,0 +1,25 @@
+generated: '2026-08-05'
+method: probed
+source: live GET probes of the seurat.com host
+host: https://www.seurat.com
+note: >-
+  No /.well-known/ document is published. www.seurat.com is a Wix-hosted site; Wix answers unknown
+  paths under /.well-known/ with HTTP 400 rather than 404, so every probe below is a clean miss —
+  not a soft-404 that could be mistaken for a hit. No api.seurat.com, docs.seurat.com,
+  developer.seurat.com, portal.seurat.com or app.seurat.com host resolves (DNS NXDOMAIN), so there
+  is no second host to probe.
+documents:
+- path: /.well-known/security.txt
+  status: 400
+- path: /.well-known/openid-configuration
+  status: 400
+- path: /.well-known/oauth-authorization-server
+  status: 400
+- path: /.well-known/api-catalog
+  status: 400
+- path: /.well-known/ai-plugin.json
+  status: 400
+- path: /.well-known/agent-card.json
+  status: 400
+- path: /.well-known/agent.json
+  status: 400

@@ -1,17 +1,34 @@
 aid: seurat
-name: Seurat
-description: 'Seurat is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+name: Seurat Technologies
+description: >-
+  Seurat Technologies is a Wilmington, Massachusetts contract manufacturer that produces
+  high-volume metal parts using its proprietary Area Printing technology, a Laser Powderbed Fusion
+  (LPBF) additive process that decouples print speed from resolution and is positioned as roughly
+  10x more productive than conventional LPBF. Seurat does not sell 3D printers; it sells parts,
+  qualifying customer designs through its Area Printing Production (APP) qualification program and
+  then mass-producing them at localized factories for consumer electronics, automotive, energy,
+  aerospace and defense OEMs. The company markets its process on reshoring, supply-chain
+  resilience, tariff resistance and decarbonization, and engages customers through a quote /
+  upload-your-part motion rather than any developer-facing product.
+image: https://static.wixstatic.com/media/953c5a_7e5f56c496714d66967a49d669bbef21~mv2.jpg/v1/fill/w_2500,h_1598,al_c/953c5a_7e5f56c496714d66967a49d669bbef21~mv2.jpg
 url: https://raw.githubusercontent.com/api-evangelist/seurat/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+x-source-url: https://forgeglobal.com/seurat_stock/
 specificationVersion: '0.20'
 created: '2026-08-05'
 modified: '2026-08-05'
 tags:
 - Company
+- Additive Manufacturing
+- 3D Printing
+- Metal Manufacturing
+- Contract Manufacturing
+- Industrial
+- Aerospace
+- Automotive
+- Defense
+- Reshoring
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -20,4 +37,63 @@ maintainers:
   email: info@apis.io
 common:
 - type: Website
-  url: https://forgeglobal.com/seurat_stock/
+  url: https://www.seurat.com/
+- type: Blog
+  url: https://www.seurat.com/blog
+- type: BlogRSS
+  url: https://www.seurat.com/blog-feed.xml
+- type: News
+  url: https://www.seurat.com/news-updates
+- type: PressReleases
+  url: https://www.seurat.com/blog/categories/seurat-press-releases
+- type: WhitePapers
+  url: https://www.seurat.com/white-papers
+- type: FAQ
+  url: https://www.seurat.com/seurat-faq
+- type: Contact
+  url: https://www.seurat.com/contact-us
+- type: TermsOfService
+  url: https://www.seurat.com/terms-of-service
+- type: PrivacyPolicy
+  url: https://www.seurat.com/privacy-policy
+- type: BrandAssets
+  url: https://www.seurat.com/brand-assets
+- type: Investors
+  url: https://www.seurat.com/for-investors
+- type: Jobs
+  url: https://boards.greenhouse.io/seurat
+- type: LinkedIn
+  url: https://www.linkedin.com/company/seurat-technologies/
+- type: YouTube
+  url: https://www.youtube.com/channel/UCeIqe1rqv7GzkfdZHoltL-A
+- type: LLMsTxt
+  url: llms/seurat-llms.txt
+- type: MCPServer
+  url: mcp/seurat-mcp.yml
+- type: DomainSecurity
+  url: security/seurat-domain-security.yml
+x-enrichment:
+  date: '2026-08-05'
+  status: minimal
+  artifacts_added: 5
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: not-a-software-company
+  detail: >-
+    Seurat Technologies sells 3D-printed metal parts, not software — the entire customer motion is
+    an "upload your part for a quote" form, and the only machine-readable surface on www.seurat.com
+    is the /llms.txt and /_api/mcp site MCP that Wix auto-generates for every site it hosts.
+  evidence:
+  - url: https://www.seurat.com/llms.txt
+    status: 200
+  - url: https://www.seurat.com/_api/mcp
+    status: 200
+  - url: https://www.seurat.com/.well-known/agent-card.json
+    status: 400
+  - url: https://www.seurat.com/pages-sitemap.xml
+    status: 200
+    note: >-
+      Full page inventory (32 URLs) — no developer, docs, API-reference or portal page; and
+      api./docs./developer./portal./app.seurat.com do not resolve in DNS.
+  checked: '2026-08-05'
