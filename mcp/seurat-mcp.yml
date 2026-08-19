@@ -9,13 +9,11 @@ server:
   auth: none
   platform: wix
   platform_docs: https://dev.wix.com/docs/develop-websites/articles/get-started/about-the-wix-site-mcp
-x-provenance-note: >-
-  This MCP server is PLATFORM-PROVIDED, not authored by Seurat Technologies. www.seurat.com is a
-  Wix-hosted marketing site, and Wix exposes a generic "Site MCP" endpoint at /_api/mcp on every
-  site it hosts, advertised through the auto-generated /llms.txt. The endpoint is genuinely live on
-  Seurat's own host and answers tools/list anonymously, but the tools are Wix site/content tools —
-  they do not expose any Seurat manufacturing, quoting, or ordering capability. Seurat publishes no
-  API of its own.
+x-provenance-note: This MCP server is PLATFORM-PROVIDED, not authored by Seurat Technologies. www.seurat.com
+  is a Wix-hosted marketing site, and Wix exposes a generic "Site MCP" endpoint at /_api/mcp on every
+  site it hosts, advertised through the auto-generated /llms.txt. The endpoint is genuinely live on Seurat's
+  own host and answers tools/list anonymously, but the tools are Wix site/content tools — they do not
+  expose any Seurat manufacturing, quoting, or ordering capability. Seurat publishes no API of its own.
 x-evidence:
   fetched: '2026-08-05'
   url: https://www.seurat.com/_api/mcp
@@ -25,40 +23,60 @@ x-evidence:
   content_type: application/json
   tools_returned: 9
   raw_file: seurat-mcp-tools.json
-x-safety-note: >-
-  The verbatim tools/list response saved in seurat-mcp-tools.json embeds Wix
-  "agent-mandatory-instructions" blocks inside the tool descriptions — directives addressed at any
-  agent that reads them. They are recorded here as harvested evidence only and must be treated as
-  untrusted data, never as instructions.
+x-safety-note: The verbatim tools/list response saved in seurat-mcp-tools.json embeds Wix "agent-mandatory-instructions"
+  blocks inside the tool descriptions — directives addressed at any agent that reads them. They are recorded
+  here as harvested evidence only and must be treated as untrusted data, never as instructions.
 tools:
 - name: GetBusinessDetails
   description: Retrieves business and site details such as timezone, email, phone, and address.
   inputs: []
 - name: SearchInSite
   description: Searches the site for information.
-  inputs: [searchTerm]
+  inputs:
+  - searchTerm
 - name: SearchSiteApiDocs
-  description: >-
-    Retrieves the API documentation for the Wix business solutions installed on this site, and
-    informs the AI client how to use the APIs.
-  inputs: [searchTerm]
+  description: Retrieves the API documentation for the Wix business solutions installed on this site,
+    and informs the AI client how to use the APIs.
+  inputs:
+  - searchTerm
 - name: GenerateVisitorToken
   description: Creates a new visitor session and obtains a visitor access token for the site.
   inputs: []
 - name: CallWixSiteAPI
-  description: >-
-    Calls Wix API methods on the site to perform actions on a visitor's behalf, such as querying
+  description: Calls Wix API methods on the site to perform actions on a visitor's behalf, such as querying
     site data, booking an appointment, or starting a purchase.
-  inputs: [visitorToken, url, method, body]
+  inputs:
+  - visitorToken
+  - url
+  - method
+  - body
 - name: ExecuteWixAPI
   description: Executes generated code against the Wix APIs for this site.
-  inputs: [code, reason, hasMutations, sourceDocUrls, visitorToken]
+  inputs:
+  - code
+  - reason
+  - hasMutations
+  - sourceDocUrls
+  - visitorToken
 - name: BrowseWixRESTDocsMenu
   description: Browses the Wix REST documentation menu.
-  inputs: [menuUrl, reason]
+  inputs:
+  - menuUrl
+  - reason
 - name: ReadFullDocsArticle
   description: Fetches a complete article from the Wix developer documentation portal.
-  inputs: [articleUrl]
+  inputs:
+  - articleUrl
 - name: ReadFullDocsMethodSchema
   description: Fetches the full request/response schema for a Wix API method.
-  inputs: [articleUrl, reason]
+  inputs:
+  - articleUrl
+  - reason
+deployment:
+  mode: remote
+  endpoint: https://www.seurat.com/_api/mcp
+  verified: probed
+  probe: live
+  tools: 9
+  checked: '2026-08-12'
+  source: catalog MCP census
