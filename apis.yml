@@ -15,7 +15,7 @@ url: https://raw.githubusercontent.com/api-evangelist/seurat/refs/heads/main/api
 x-type: company
 x-source: harvest:secondary-market
 x-source-url: https://forgeglobal.com/seurat_stock/
-specificationVersion: '0.20'
+specificationVersion: '0.23'
 created: '2026-08-05'
 modified: '2026-08-05'
 tags:
