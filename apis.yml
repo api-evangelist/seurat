@@ -10,6 +10,17 @@ description: >-
   aerospace and defense OEMs. The company markets its process on reshoring, supply-chain
   resilience, tariff resistance and decarbonization, and engages customers through a quote /
   upload-your-part motion rather than any developer-facing product.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 image: https://static.wixstatic.com/media/953c5a_7e5f56c496714d66967a49d669bbef21~mv2.jpg/v1/fill/w_2500,h_1598,al_c/953c5a_7e5f56c496714d66967a49d669bbef21~mv2.jpg
 url: https://raw.githubusercontent.com/api-evangelist/seurat/refs/heads/main/apis.yml
 x-type: company
