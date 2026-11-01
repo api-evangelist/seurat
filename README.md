@@ -1,4 +1,4 @@
-# Seurat
+# Seurat Technologies
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,5 +64,88 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Seurat is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://forgeglobal.com/seurat_stock/
+Seurat Technologies is a Wilmington, Massachusetts contract manufacturer that produces high-volume metal parts using its proprietary Area Printing technology, a Laser Powderbed Fusion (LPBF) additive process that decouples print speed from resolution and is positioned as roughly 10x more productive than conventional LPBF. Seurat does not sell 3D printers; it sells parts, qualifying customer designs through its Area Printing Production (APP) qualification program and then mass-producing them at localized factories for consumer electronics, automotive, energy, aerospace and defense OEMs. The company markets its process on reshoring, supply-chain resilience, tariff resistance and decarbonization, and engages customers through a quote / upload-your-part motion rather than any developer-facing product.
+
+**Areas:** Company · 3D Printing · Metal Manufacturing · Contract Manufacturing · Industrial · Aerospace · Automotive · Defense · Reshoring
+
+## Seurat Technologies on APIs.io
+
+Everything profiled for Seurat Technologies is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/seurat/](https://apis.io/providers/seurat/)** — or go straight to one of the APIs or properties below.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [seurat-site-mcp](https://apis.io/servers/seurat/seurat-site-mcp/)
+
+#### Security (1)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Seurat Domain Security](https://apis.io/security/seurat/seurat-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.seurat.com/)
+- [Blog](https://www.seurat.com/blog)
+- [Terms of service](https://www.seurat.com/terms-of-service)
+- [Privacy policy](https://www.seurat.com/privacy-policy)
+
+## API Evangelist rating
+
+**Kin Score 10.4** — minimal · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 59.2 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 2.4 |
+| Access clarity | 21.1 |
+
+**Agent readiness 2.2** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | platform (partial credit) |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 13.7** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/seurat/](https://apis.io/providers/seurat/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Seurat Technologies: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/seurat/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
